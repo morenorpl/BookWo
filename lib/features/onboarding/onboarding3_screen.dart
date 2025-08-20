@@ -1,0 +1,98 @@
+import 'package:ecommerce_mobile/features/onboarding/authentication_screen.dart';
+import 'package:ecommerce_mobile/preference/color.dart';
+import 'package:flutter/material.dart';
+
+class Onboarding3Screen extends StatelessWidget {
+  const Onboarding3Screen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: MainColors.primaryColor,
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 32),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Row(
+              spacing: 10,
+              children: [
+                Expanded(
+                  child: Container(
+                    height: 5,
+                    decoration: BoxDecoration(
+                      color: MainColors.primaryColor[200],
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    height: 5,
+                    decoration: BoxDecoration(
+                      color: MainColors.primaryColor[200],
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    height: 5,
+                    decoration: BoxDecoration(
+                      color: MainColors.primaryColor[200],
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+
+            SizedBox(height: 48),
+
+            Text(
+              'Track and Organize Your Journey',
+              style: TextStyle(
+                fontSize: 32,
+                fontWeight: FontWeight.bold,
+                color: MainColors.blackColor,
+              ),
+              textAlign: TextAlign.start,
+            ),
+            const SizedBox(height: 12),
+            Expanded(
+              child: Text(
+                'Keep your reading life in one place. Log your progress, create wish lists, and rate books you\'ve finished. Your reading journey, perfectly organized and at your fingertips.',
+                style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                  color: MainColors.blackColor[400],
+                ),
+                textAlign: TextAlign.start,
+              ),
+            ),
+            Image.asset('assets/images/onboarding_three.png', scale: 3.8),
+            const SizedBox(height: 12),
+
+            Row(
+              children: [
+                Expanded(
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => AuthenticationScreen(),
+                        ),
+                      );
+                    },
+                    child: Text('Get Started'),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
