@@ -4,7 +4,7 @@ class MainColors {
   MainColors._();
 
   static const primaryColor = MaterialColor(0xffEFC129, {
-    200: Color(0xffFFF0BF),
+    200: Color(0xffFFE797),
     400: Color(0xffFFDA60),
     600: Color(0xffD3A717),
     800: Color(0xffA5820E),

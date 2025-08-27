@@ -1,8 +1,5 @@
-import 'package:ecommerce_mobile/preference/assets.dart';
-import 'package:ecommerce_mobile/preference/color.dart';
-import 'package:ecommerce_mobile/preference/custom_icon.dart';
-import 'package:ecommerce_mobile/features/home/model/item_model.dart';
-import 'package:ecommerce_mobile/features/home/widgets/card_item.dart';
+import 'package:ecommerce_mobile/preference/preference.dart';
+import 'package:ecommerce_mobile/features/features.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -59,21 +56,16 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                     Row(
-                      spacing: 10,
+                      spacing: 20,
                       children: [
                         Icon(
-                          Icons.my_library_books_outlined,
-                          size: 20,
+                          Icons.notifications_rounded,
+                          size: 25,
                           color: MainColors.blackColor,
                         ),
                         Icon(
-                          Icons.notifications_none_rounded,
-                          size: 20,
-                          color: MainColors.blackColor,
-                        ),
-                        Icon(
-                          Icons.settings_outlined,
-                          size: 20,
+                          Icons.settings_rounded,
+                          size: 25,
                           color: MainColors.blackColor,
                         ),
                       ],
@@ -104,8 +96,7 @@ class HomeScreen extends StatelessWidget {
                             ),
                           ),
                           TextSpan(
-                            text:
-                                ',\nwhat genre are you in\nthe mood for today? ',
+                            text: ',\nwhat genre are you feeling today? ',
                           ),
                         ],
                       ),
@@ -192,9 +183,9 @@ class HomeScreen extends StatelessWidget {
                     CardItem(
                       item: CardItemModel(
                         bgColor: null,
-                        imagePath: MainAssets.food3,
-                        nameBook: 'Honey lime combo',
-                        nameAuthor: 'Moreno Ibrahim',
+                        imagePath: MainAssets.book1,
+                        nameBook: 'To Kill a Mockingbird',
+                        nameAuthor: 'Harper Lee',
                         price: '2,000',
                       ),
                     ),

@@ -1,7 +1,6 @@
-import 'package:ecommerce_mobile/components/go_back_button.dart';
-import 'package:ecommerce_mobile/features/cart/screen/input_adress_screen.dart';
-import 'package:ecommerce_mobile/preference/assets.dart';
-import 'package:ecommerce_mobile/preference/color.dart';
+import 'package:ecommerce_mobile/components/components.dart';
+import 'package:ecommerce_mobile/features/features.dart';
+import 'package:ecommerce_mobile/preference/preference.dart';
 import 'package:flutter/material.dart';
 
 class CartScreen extends StatelessWidget {
@@ -13,7 +12,7 @@ class CartScreen extends StatelessWidget {
       appBar: AppBar(
         leading: GoBackButton(),
         title: Text(
-          'My Bookshelf',
+          'My Shopping Bag',
           style: TextStyle(
             color: MainColors.whiteColor,
             fontSize: 20,
@@ -22,68 +21,84 @@ class CartScreen extends StatelessWidget {
         ),
         backgroundColor: MainColors.primaryColor,
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 24.0),
-        child: ListView(
-          children: [
-            buildItem(),
-            Divider(thickness: 0.5, color: MainColors.blackColor[800]),
-            buildItem(),
-            Divider(thickness: 0.5, color: MainColors.blackColor[800]),
-            buildItem(),
-            Divider(thickness: 0.5, color: MainColors.blackColor[800]),
-            buildItem(),
-            Divider(thickness: 0.5, color: MainColors.blackColor[800]),
-            buildItem(),
-            Divider(thickness: 0.5, color: MainColors.blackColor[800]),
-            buildItem(),
-            Divider(thickness: 0.5, color: MainColors.blackColor[800]),
-            buildItem(),
-            Divider(thickness: 0.5, color: MainColors.blackColor[800]),
-          ],
+      body: Container(
+        color: MainColors.secondaryColor,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24.0),
+          child: ListView(
+            children: [
+              buildItem(),
+              Divider(thickness: 0.5, color: MainColors.blackColor[800]),
+              buildItem(),
+              Divider(thickness: 0.5, color: MainColors.blackColor[800]),
+              buildItem(),
+              Divider(thickness: 0.5, color: MainColors.blackColor[800]),
+              buildItem(),
+              Divider(thickness: 0.5, color: MainColors.blackColor[800]),
+              buildItem(),
+              Divider(thickness: 0.5, color: MainColors.blackColor[800]),
+              buildItem(),
+              Divider(thickness: 0.5, color: MainColors.blackColor[800]),
+              buildItem(),
+              Divider(thickness: 0.5, color: MainColors.blackColor[800]),
+            ],
+          ),
         ),
       ),
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 20),
-        child: Row(
-          spacing: 25,
-          children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Text(
-                  'Total',
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500,
-                    color: MainColors.blackColor[400],
-                  ),
-                ),
-                Text(
-                  'Rp 60,000',
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.w500,
-                    color: MainColors.blackColor,
-                  ),
-                ),
-              ],
-            ),
-            Expanded(
-              child: ElevatedButton(
-                onPressed: () {
-                  showModalBottomSheet(
-                    context: context,
-                    builder: (context) {
-                      return InputAdress();
-                    },
-                  );
-                },
-                child: const Text('Checkout'),
-              ),
+      bottomNavigationBar: Container(
+        decoration: BoxDecoration(
+          color: MainColors.secondaryColor,
+          boxShadow: <BoxShadow>[
+            BoxShadow(
+              color: MainColors.blackColor[800]!,
+              blurRadius: 25.0,
+              spreadRadius: 0.5,
+              offset: Offset(0.0, 1.0),
             ),
           ],
+        ),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 20),
+          child: Row(
+            spacing: 25,
+            children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    'Total',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                      color: MainColors.secondaryColor[800],
+                    ),
+                  ),
+                  Text(
+                    'Rp 60,000',
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.w500,
+                      color: MainColors.primaryColor[600],
+                    ),
+                  ),
+                ],
+              ),
+              Expanded(
+                child: ElevatedButton(
+                  onPressed: () {
+                    showModalBottomSheet(
+                      context: context,
+                      builder: (context) {
+                        return InputAdress();
+                      },
+                    );
+                  },
+                  child: const Text('Checkout'),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -99,10 +114,10 @@ class CartScreen extends StatelessWidget {
               Container(
                 padding: EdgeInsets.all(12),
                 decoration: BoxDecoration(
-                  color: MainColors.whiteColor[400],
+                  color: MainColors.secondaryColor[600],
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: Image.asset(MainAssets.food1, width: 65, height: 65),
+                child: Image.asset(MainAssets.book1, width: 65, height: 65),
               ),
               SizedBox(width: 16),
               Expanded(

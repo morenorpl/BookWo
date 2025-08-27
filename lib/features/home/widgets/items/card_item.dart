@@ -1,6 +1,5 @@
-import 'package:ecommerce_mobile/features/home/model/item_model.dart';
-import 'package:ecommerce_mobile/features/home/screen/detail_screen.dart';
-import 'package:ecommerce_mobile/preference/color.dart';
+import 'package:ecommerce_mobile/features/features.dart';
+import 'package:ecommerce_mobile/preference/preference.dart';
 import 'package:flutter/material.dart';
 
 class CardItem extends StatefulWidget {
@@ -43,7 +42,12 @@ class _CardItemState extends State<CardItem> {
                 MaterialPageRoute(builder: (context) => DetailScreen()),
               );
             },
-            child: Image.asset(widget.item.imagePath, width: 80, height: 80),
+            child: Image.asset(
+              widget.item.imagePath,
+              width: 80,
+              height: 80,
+              fit: BoxFit.fill,
+            ),
           ),
         ),
 

@@ -1,5 +1,5 @@
-import 'package:ecommerce_mobile/features/onboarding/authentication_screen.dart';
-import 'package:ecommerce_mobile/preference/color.dart';
+import 'package:ecommerce_mobile/features/features.dart';
+import 'package:ecommerce_mobile/preference/preference.dart';
 import 'package:flutter/material.dart';
 
 class Onboarding3Screen extends StatelessWidget {

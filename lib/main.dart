@@ -1,8 +1,8 @@
-import 'package:ecommerce_mobile/features/onboarding/onboarding1_screen.dart';
-import 'package:ecommerce_mobile/features/onboarding/authentication_screen.dart';
-import 'package:ecommerce_mobile/features/splash/splash_screen.dart';
-import 'package:ecommerce_mobile/features/home/screen/home_screen.dart';
-import 'package:ecommerce_mobile/preference/color.dart';
+import 'package:ecommerce_mobile/features/onboarding/onboarding1/onboarding1_screen.dart';
+import 'package:ecommerce_mobile/features/onboarding/authentication/authentication_screen.dart';
+import 'package:ecommerce_mobile/features/splash/screen/splash_screen.dart';
+import 'package:ecommerce_mobile/features/home/screen/home_screen/home_screen.dart';
+import 'package:ecommerce_mobile/preference/colors/color.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
           style: ElevatedButton.styleFrom(
             padding: EdgeInsets.symmetric(vertical: 14),
             backgroundColor: MainColors.blackColor,
-            foregroundColor: MainColors.whiteColor,
+            foregroundColor: MainColors.secondaryColor,
             textStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadiusGeometry.circular(15),
