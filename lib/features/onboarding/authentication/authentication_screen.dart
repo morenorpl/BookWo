@@ -22,14 +22,13 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
         child: Column(
           children: [
             Container(
-              height: MediaQuery.of(context).size.height * 0.20,
+              height: MediaQuery.of(context).size.height * 0.25,
               decoration: const BoxDecoration(
                 color: MainColors.primaryColor,
                 image: DecorationImage(
-                  image: AssetImage(
-                    'assets/images/30_White_Tattoo_Designs_That_Look_Like_Magic_Runes-removebg-preview.png',
-                  ),
-                  scale: 1,
+                  image: AssetImage('assets/images/authentication_image.png'),
+                  scale: 3.6,
+                  alignment: Alignment.bottomCenter,
                 ),
               ),
             ),
@@ -83,7 +82,7 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
                                 color: MainColors.secondaryColor[800],
                               ),
                             ),
-                            const SizedBox(height: 34),
+                            const SizedBox(height: 24),
                             Text(
                               ' Username',
                               style: TextStyle(

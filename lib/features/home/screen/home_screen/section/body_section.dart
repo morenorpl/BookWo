@@ -96,9 +96,9 @@ class BodySection extends StatelessWidget {
                   CardItem(
                     item: CardItemModel(
                       bgColor: null,
-                      imagePath: 'assets/images/Glowing-Berry-Fruit.png',
-                      nameBook: 'Berry mango combo',
-                      nameAuthor: 'Moreno Ibrahim',
+                      imagePath: MainAssets.book2,
+                      nameBook: 'The Name of the Wind',
+                      nameAuthor: 'Patrick Rothfuss',
                       price: '8,000',
                     ),
                   ),
@@ -164,28 +164,39 @@ class BodySection extends StatelessWidget {
             children: [
               CardItem(
                 item: CardItemModel(
-                  imagePath: 'assets/images/breakfast-quinoa-salad.png',
-                  nameBook: 'Quinoa fruit salad',
-                  nameAuthor: 'Moreno Ibrahim',
+                  imagePath: MainAssets.book4,
+                  nameBook: 'The Girl with the Dragon Tattoo',
+                  nameAuthor: 'Stieg Larsson',
+                  price: '18,000',
+                ),
+              ),
+
+              SizedBox(width: 16),
+              CardItem(
+                item: CardItemModel(
+                  imagePath: MainAssets.book3,
+                  nameBook: 'The Martian',
+                  nameAuthor: 'Andy Weir',
                   price: '10,000',
                 ),
               ),
               SizedBox(width: 16),
               CardItem(
                 item: CardItemModel(
-                  imagePath: 'assets/images/Tropical-Fruit-Salad.png',
-                  nameBook: 'Tropical fruit salad',
-                  nameAuthor: 'Moreno Ibrahim',
-                  price: '10,000',
+                  imagePath: MainAssets.book2,
+                  nameBook: 'The Name of the Wind',
+                  nameAuthor: 'Patrick Rothfuss',
+                  price: '8,000',
                 ),
               ),
               SizedBox(width: 16),
               CardItem(
                 item: CardItemModel(
-                  imagePath: 'assets/images/melon-fruit-salad.png',
-                  nameBook: 'Melon fruit salad',
-                  nameAuthor: 'Moreno Ibrahim',
-                  price: '10,000',
+                  bgColor: null,
+                  imagePath: MainAssets.book1,
+                  nameBook: 'To Kill a Mockingbird',
+                  nameAuthor: 'Harper Lee',
+                  price: '2,000',
                 ),
               ),
             ],

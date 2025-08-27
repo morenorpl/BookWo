@@ -5,6 +5,9 @@ class InputAdress extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(child: Column(children: [Text('Delivery Adress')]));
+    return Container(
+      padding: EdgeInsets.all(10),
+      child: Column(children: [Text('Delivery Adress')]),
+    );
   }
 }

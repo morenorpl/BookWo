@@ -23,26 +23,22 @@ class CartScreen extends StatelessWidget {
       ),
       body: Container(
         color: MainColors.secondaryColor,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24.0),
-          child: ListView(
-            children: [
-              buildItem(),
-              Divider(thickness: 0.5, color: MainColors.blackColor[800]),
-              buildItem(),
-              Divider(thickness: 0.5, color: MainColors.blackColor[800]),
-              buildItem(),
-              Divider(thickness: 0.5, color: MainColors.blackColor[800]),
-              buildItem(),
-              Divider(thickness: 0.5, color: MainColors.blackColor[800]),
-              buildItem(),
-              Divider(thickness: 0.5, color: MainColors.blackColor[800]),
-              buildItem(),
-              Divider(thickness: 0.5, color: MainColors.blackColor[800]),
-              buildItem(),
-              Divider(thickness: 0.5, color: MainColors.blackColor[800]),
-            ],
-          ),
+        child: ListView(
+          children: [
+            Padding(
+              padding: EdgeInsetsGeometry.symmetric(horizontal: 24),
+              child: Column(
+                children: [
+                  buildItem(),
+                  Divider(thickness: 0.5, color: MainColors.blackColor[800]),
+                  buildItem(),
+                  Divider(thickness: 0.5, color: MainColors.blackColor[800]),
+                  buildItem(),
+                  Divider(thickness: 0.5, color: MainColors.blackColor[800]),
+                ],
+              ),
+            ),
+          ],
         ),
       ),
       bottomNavigationBar: Container(
@@ -112,29 +108,43 @@ class CartScreen extends StatelessWidget {
           Row(
             children: [
               Container(
+                width: 80,
+                height: 100,
                 padding: EdgeInsets.all(12),
                 decoration: BoxDecoration(
                   color: MainColors.secondaryColor[600],
                   borderRadius: BorderRadius.circular(10),
+                  image: DecorationImage(
+                    image: AssetImage(MainAssets.book1),
+                    fit: BoxFit.cover,
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Color(0x2020200D),
+                      spreadRadius: 6,
+                      blurRadius: 6,
+                      offset: Offset(0, 0),
+                    ),
+                  ],
                 ),
-                child: Image.asset(MainAssets.book1, width: 65, height: 65),
               ),
+
               SizedBox(width: 16),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Quinoa fruit salad',
+                      'To Kill a Mockingbird',
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
                     Text(
-                      '2packs',
+                      'x1',
                       style: TextStyle(
-                        fontSize: 18,
+                        fontSize: 16,
                         fontWeight: FontWeight.w600,
                       ),
                     ),

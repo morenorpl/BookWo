@@ -78,6 +78,14 @@ class _DetailScreenState extends State<DetailScreen> {
                                 image: AssetImage(MainAssets.book1),
                                 fit: BoxFit.cover,
                               ),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Color(0x2020200D),
+                                  spreadRadius: 3,
+                                  blurRadius: 6,
+                                  offset: Offset(0, 3),
+                                ),
+                              ],
                             ),
                           ),
                           const SizedBox(height: 12),

@@ -42,11 +42,17 @@ class _CardItemState extends State<CardItem> {
                 MaterialPageRoute(builder: (context) => DetailScreen()),
               );
             },
-            child: Image.asset(
-              widget.item.imagePath,
-              width: 80,
-              height: 80,
-              fit: BoxFit.fill,
+            child: ClipRRect(
+              borderRadius: BorderRadiusGeometry.only(
+                topLeft: Radius.circular(16),
+                topRight: Radius.circular(16),
+              ),
+              child: Image.asset(
+                widget.item.imagePath,
+                width: 80,
+                height: 80,
+                fit: BoxFit.fill,
+              ),
             ),
           ),
         ),
