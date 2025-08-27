@@ -1,8 +1,5 @@
-import 'package:ecommerce_mobile/features/onboarding/onboarding1/onboarding1_screen.dart';
-import 'package:ecommerce_mobile/features/onboarding/authentication/authentication_screen.dart';
-import 'package:ecommerce_mobile/features/splash/screen/splash_screen.dart';
-import 'package:ecommerce_mobile/features/home/screen/home_screen/home_screen.dart';
-import 'package:ecommerce_mobile/preference/colors/color.dart';
+import 'package:ecommerce_mobile/features/features.dart';
+import 'package:ecommerce_mobile/preference/preference.dart';
 import 'package:flutter/material.dart';
 
 void main() {
