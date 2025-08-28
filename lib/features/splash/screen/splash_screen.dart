@@ -29,23 +29,32 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       backgroundColor: MainColors.secondaryColor,
       body: Center(
-        child: Container(
-          decoration: BoxDecoration(
-            color: MainColors.primaryColor,
-            borderRadius: BorderRadius.circular(20),
-            boxShadow: [
-              BoxShadow(
-                color: Color(0x2020200D),
-                spreadRadius: 6,
-                blurRadius: 6,
-                offset: Offset(0, 0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                color: MainColors.primaryColor,
+                borderRadius: BorderRadius.circular(20),
+                boxShadow: [
+                  BoxShadow(
+                    color: Color(0x2020200D),
+                    spreadRadius: 6,
+                    blurRadius: 6,
+                    offset: Offset(0, 0),
+                  ),
+                ],
               ),
-            ],
-          ),
-          height: 150,
-          width: 150,
-          padding: EdgeInsets.all(10),
-          child: Image.asset('assets/images/bookwologo.png'),
+              height: 150,
+              width: 150,
+              padding: EdgeInsets.all(10),
+              child: Image.asset('assets/images/bookwologo.png'),
+            ),
+            Text(
+              'BookWo',
+              style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+            ),
+          ],
         ),
       ),
     );

@@ -64,7 +64,6 @@ class HeaderSection extends StatelessWidget {
                 text: TextSpan(
                   style: TextStyle(
                     fontSize: 32,
-                    fontFamily: 'Josefin sans',
                     height: 1,
                     fontWeight: FontWeight.bold,
                     color: MainColors.blackColor,
