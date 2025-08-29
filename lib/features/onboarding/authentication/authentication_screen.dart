@@ -56,7 +56,7 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
                               text: TextSpan(
                                 style: TextStyle(
                                   fontSize: 32,
-                                  fontFamily: 'Josefin sans',
+                                  fontFamily: 'Inter',
                                   height: 1,
                                   fontWeight: FontWeight.bold,
                                   color: MainColors.blackColor,

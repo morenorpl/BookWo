@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 class CardItemModel {
-  final String imagePath;
+  String imagePath;
   final String nameBook;
   final String nameAuthor;
   String? descriptionBook;

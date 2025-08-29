@@ -66,6 +66,7 @@ class _DetailScreenState extends State<DetailScreen> {
                               ),
                             ],
                           ),
+
                           const SizedBox(height: 24),
 
                           Container(
@@ -263,7 +264,7 @@ class _DetailScreenState extends State<DetailScreen> {
                                 end: Alignment.bottomCenter,
                                 colors: [
                                   MainColors.whiteColor,
-                                  Colors.white.withAlpha(0),
+                                  Colors.white.withValues(alpha: 0.0),
                                 ],
                                 stops: [0.0, 0.5],
                               ).createShader(bounds);

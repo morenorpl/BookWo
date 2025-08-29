@@ -30,12 +30,13 @@ class _SplashScreenState extends State<SplashScreen> {
       backgroundColor: MainColors.secondaryColor,
       body: Center(
         child: Column(
+          spacing: 5,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
               decoration: BoxDecoration(
                 color: MainColors.primaryColor,
-                borderRadius: BorderRadius.circular(20),
+                borderRadius: BorderRadius.circular(30),
                 boxShadow: [
                   BoxShadow(
                     color: Color(0x2020200D),
@@ -47,12 +48,12 @@ class _SplashScreenState extends State<SplashScreen> {
               ),
               height: 150,
               width: 150,
-              padding: EdgeInsets.all(10),
+              padding: EdgeInsets.all(15),
               child: Image.asset('assets/images/bookwologo.png'),
             ),
             Text(
               'BookWo',
-              style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
             ),
           ],
         ),

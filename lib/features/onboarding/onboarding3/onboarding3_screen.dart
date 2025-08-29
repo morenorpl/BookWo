@@ -61,7 +61,7 @@ class Onboarding3Screen extends StatelessWidget {
             const SizedBox(height: 12),
             Expanded(
               child: Text(
-                'Keep your reading life in one place. Log your progress, create wish lists, and rate books you\'ve finished. Your reading journey, perfectly organized and at your fingertips.',
+                'Keep your reading life in one place. Log your progress, create your own bookshelf, and rate books you\'ve finished. Your reading journey, perfectly organized and at your fingertips.',
                 style: TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w400,

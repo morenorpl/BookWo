@@ -22,7 +22,7 @@ class _MainScreenState extends State<MainScreen> {
       HomeScreen(name: widget.name),
       MyBookshelfScreen(),
       CartScreen(),
-      ProfileScreen(),
+      ProfileScreen(name: widget.name),
     ];
   }
 

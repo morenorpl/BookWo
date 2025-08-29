@@ -63,21 +63,22 @@ class HeaderSection extends StatelessWidget {
               RichText(
                 text: TextSpan(
                   style: TextStyle(
+                    fontFamily: 'Inter',
                     fontSize: 32,
-                    height: 1,
+                    height: 1.1,
                     fontWeight: FontWeight.bold,
                     color: MainColors.blackColor,
                   ),
                   children: <TextSpan>[
-                    TextSpan(text: 'Whats up '),
+                    TextSpan(text: 'What\'s up, '),
                     TextSpan(
-                      text: '$name',
+                      text: '$name!',
                       style: TextStyle(
                         color: MainColors.primaryColor,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    TextSpan(text: ',\nwhat genre are you feeling today? '),
+                    TextSpan(text: '\nwhat genre are you feeling today? '),
                   ],
                 ),
               ),

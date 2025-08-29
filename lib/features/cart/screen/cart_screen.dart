@@ -10,12 +10,13 @@ class CartScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        toolbarHeight: 80,
         leading: GoBackButton(),
         title: Text(
           'My Shopping Bag',
           style: TextStyle(
             color: MainColors.whiteColor,
-            fontSize: 20,
+            fontSize: 18,
             fontWeight: FontWeight.w500,
           ),
         ),
@@ -73,8 +74,8 @@ class CartScreen extends StatelessWidget {
                   Text(
                     'Rp 60,000',
                     style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.w500,
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
                       color: MainColors.primaryColor[600],
                     ),
                   ),

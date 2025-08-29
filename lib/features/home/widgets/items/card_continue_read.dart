@@ -16,9 +16,11 @@ class _CardContinueReadState extends State<CardContinueRead> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 100,
+      width: 365,
       decoration: BoxDecoration(
-        color: widget.item.bgColor ?? MainColors.blackColor,
-        borderRadius: BorderRadius.circular(16),
+        color: widget.item.bgColor ?? MainColors.secondaryColor[200],
+        borderRadius: BorderRadius.circular(30),
         boxShadow: [
           BoxShadow(
             color: Color(0x2020200D),
@@ -29,61 +31,85 @@ class _CardContinueReadState extends State<CardContinueRead> {
         ],
       ),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 10),
-        child: SizedBox(
-          height: 100,
-          child: ListView(
-            clipBehavior: Clip.none,
-            scrollDirection: Axis.horizontal,
-            padding: EdgeInsets.symmetric(horizontal: 24.0),
-            shrinkWrap: true,
-            children: [
-              Container(
-                height: 100,
-                width: 100,
-                decoration: BoxDecoration(
-                  color: MainColors.primaryColor,
-                  borderRadius: BorderRadius.circular(15),
-                  image: DecorationImage(
-                    image: AssetImage(MainAssets.book1),
-                    fit: BoxFit.cover,
+        padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
+        child: Row(
+          children: [
+            Container(
+              width: 100,
+              height: 100,
+              decoration: BoxDecoration(
+                color: MainColors.primaryColor,
+                borderRadius: BorderRadius.circular(15),
+                image: DecorationImage(
+                  image: AssetImage(widget.item.imagePath),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+            SizedBox(width: 15),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  widget.item.nameBook,
+                  style: TextStyle(
+                    color: MainColors.blackColor,
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
                   ),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Color(0x2020200D),
-                      spreadRadius: 3,
-                      blurRadius: 6,
-                      offset: Offset(0, 3),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                ),
+                Text(
+                  widget.item.nameAuthor,
+                  style: TextStyle(
+                    color: MainColors.blackColor[800],
+                    fontSize: 12,
+                  ),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                ),
+                SizedBox(height: 20),
+                Row(
+                  spacing: 10,
+                  children: [
+                    Stack(
+                      children: [
+                        Container(
+                          width: 175,
+                          height: 5,
+                          decoration: BoxDecoration(
+                            color: MainColors.whiteColor[600],
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                        ),
+                        Positioned(
+                          child: Container(
+                            width: widget.item.readProgressBar,
+                            height: 5,
+                            decoration: BoxDecoration(
+                              color: MainColors.primaryColor,
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Text(
+                      widget.item.readProgressNumber,
+                      style: TextStyle(
+                        color: MainColors.blackColor[800],
+                        fontSize: 12,
+                      ),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                     ),
                   ],
                 ),
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    widget.item.nameBook,
-                    style: TextStyle(
-                      color: MainColors.whiteColor,
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                    ),
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                  Text(
-                    widget.item.nameAuthor,
-                    style: TextStyle(
-                      color: MainColors.whiteColor[800],
-                      fontSize: 12,
-                    ),
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                ],
-              ),
-            ],
-          ),
+              ],
+            ),
+          ],
         ),
       ),
     );
