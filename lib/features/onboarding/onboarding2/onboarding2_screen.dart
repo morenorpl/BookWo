@@ -21,7 +21,7 @@ class Onboarding2Screen extends StatelessWidget {
                   child: Container(
                     height: 5,
                     decoration: BoxDecoration(
-                      color: MainColors.primaryColor[200],
+                      color: MainColors.secondaryColor,
                       borderRadius: BorderRadius.circular(10),
                     ),
                   ),
@@ -30,7 +30,7 @@ class Onboarding2Screen extends StatelessWidget {
                   child: Container(
                     height: 5,
                     decoration: BoxDecoration(
-                      color: MainColors.primaryColor[200],
+                      color: MainColors.secondaryColor,
                       borderRadius: BorderRadius.circular(10),
                     ),
                   ),
@@ -70,8 +70,8 @@ class Onboarding2Screen extends StatelessWidget {
                 textAlign: TextAlign.start,
               ),
             ),
-            Image.asset('assets/images/onboarding_two.png', scale: 3.5),
-            const SizedBox(height: 12),
+            Image.asset(MainAssets.secondOnboarding, scale: 3.3),
+            const SizedBox(height: 0),
 
             Row(
               spacing: 20,

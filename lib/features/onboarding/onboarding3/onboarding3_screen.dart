@@ -21,7 +21,7 @@ class Onboarding3Screen extends StatelessWidget {
                   child: Container(
                     height: 5,
                     decoration: BoxDecoration(
-                      color: MainColors.primaryColor[200],
+                      color: MainColors.secondaryColor,
                       borderRadius: BorderRadius.circular(10),
                     ),
                   ),
@@ -30,7 +30,7 @@ class Onboarding3Screen extends StatelessWidget {
                   child: Container(
                     height: 5,
                     decoration: BoxDecoration(
-                      color: MainColors.primaryColor[200],
+                      color: MainColors.secondaryColor,
                       borderRadius: BorderRadius.circular(10),
                     ),
                   ),
@@ -39,7 +39,7 @@ class Onboarding3Screen extends StatelessWidget {
                   child: Container(
                     height: 5,
                     decoration: BoxDecoration(
-                      color: MainColors.primaryColor[200],
+                      color: MainColors.secondaryColor,
                       borderRadius: BorderRadius.circular(10),
                     ),
                   ),
@@ -70,8 +70,8 @@ class Onboarding3Screen extends StatelessWidget {
                 textAlign: TextAlign.start,
               ),
             ),
-            Image.asset('assets/images/onboarding_three.png', scale: 3.8),
-            const SizedBox(height: 12),
+            Image.asset(MainAssets.thirdOnboarding, scale: 3.6),
+            const SizedBox(height: 38),
 
             Row(
               children: [
